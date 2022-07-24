@@ -9,3 +9,4 @@ All messages that you send to the bot will be sent to the server and all server 
   <a href="https://github.com/neluckoff/tg_server_bot/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/neluckoff/tg_server_bot"></a>
 </div>
   
+To work, you just need to fill in all the data in the file [.env](https://github.com/neluckoff/tg_server_bot/blob/master/.env).
