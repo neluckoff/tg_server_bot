@@ -26,15 +26,12 @@ class Server:
         return str(stdout.decode())
 
     def command(self, msg):
-        if "sudo" in msg:
-            self.command_sudo(msg)
-        else:
-            self.channel.send(msg + '\n')
-            time.sleep(self.sleep_time)
-            stdout = self.channel.recv(1024)
-            text = str(stdout.decode())
-            text = '\n'.join(text.split('\n')[1:])
-            return text
+        self.channel.send(msg + '\n')
+        time.sleep(self.sleep_time)
+        stdout = self.channel.recv(1024)
+        text = str(stdout.decode())
+        text = '\n'.join(text.split('\n')[1:])
+        return text
 
     def command_sudo(self, msg):
         self.channel.send(msg + '\n')
